@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Testing</title>
+</head>
+<body>
+    <h1>Saved Task List</h1>
+    <ul>
+        {% for key, value in tasks.items() %}
+            <li>{{ key }}: {{ value }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Load Previous Task List</h2>
+    <form action="/loadTasks" method="GET">
+        <button type="submit">Load Tasks</button>
+    </form>
+    <form action="/overwrite" method="GET">
+        <button type="submit">New Task List</button>
+    </form>
+    <h2>Add Tasks</h2>
+    <form action="/addTasks" method="POST">
+        <label for="taskName">Task Name:</label>
+        <input type="text" id="taskName" name="taskName" required><br>
+        <label for="taskValue">Task Value:</label>
+        <input type="text" id="taskValue" name="taskValue" required><br>
+        <button type="submit">Add Task</button>
+    </form>
+    <form action="/saveTasks" method="POST">
+        <button type="submit">Save Tasks</button>
+    </form>
+</body>
+</html>
