@@ -4,6 +4,8 @@ A microservice to create persistent task lists for Louie
 
 It allow for task list retrieval (using /getTasks) as well as task list saving to a JSON file (using /saveTasks)
 
+> DO NOT USE main.py. It is a test program I used for A8
+
 # Communication Contract:
 a **POST** request from the main program side would look like:
 
