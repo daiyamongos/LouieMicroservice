@@ -7,9 +7,10 @@ It allow for task list retrieval (using /getTasks) as well as task list saving t
 > DO NOT USE main.py. It is a test program I used for A8
 
 # Communication Contract:
-a **POST** request from the main program side would look like:
 
-## example of sending task list to microservice A (with HTTP POST request)
+## Place holder for UML Diagram
+
+## Example of sending task list to microservice A (with HTTP POST request)
 
 ### Sample task list
 ```
@@ -57,7 +58,7 @@ if the microservice cannot save the task list to savedTasks.json for any reason
   "error": "Failed to save to JSON file!"
 }
 ```
-## example of retrieving task list from microservice A (with HTTP GET request)
+## Example of retrieving task list from microservice A (with HTTP GET request)
 
 ```
 ### URL of the GET microservice
@@ -90,7 +91,7 @@ if the task list retrieval failed
     'error': "Could not retrieve task list!"
 }
 ```
-# Setup / Running Microservice
+# Setup / Running Microservice:
 
 It isn't a lot of setup to be honest. It should be run locally on a virtual environment. I assume since Louie is using flask he will already have all of this setup for his project but will still list it in case.
 
@@ -100,12 +101,14 @@ virtualenv venv
 ```
 
 > this may not apply if you are using windows
+
 activate virtual environment (for macOS)
 ```
 source venv/bin/activate
 ```
 
 > May not need to do this since you will probably already have yours setup
+
 make sure to install any required packages for the virtual environment
 ```
 pip install -r requirements.txt
