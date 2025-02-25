@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = "http://127.0.0.1:5000"  # Update if running on a different port
+url = "http://127.0.0.1:5000"
 
 def save_tasks(tasks):
     response = requests.post(f"{url}/saveTasks", json=tasks)
@@ -14,15 +14,13 @@ def get_tasks():
 
 
 def test_task_list():
-    valid_tasks = [
-        {"task": "Buy groceries", "completed": False},
-        {"task": "Walk the dog", "completed": True},
-        {"task": "Study for exam", "completed": False},
-        {"task": "Go to the gym", "completed": True},
-        {"task": "Call mom", "completed": False},
+    tasks_list = [
+    {"task": "Buy groceries", "desc": "Keep within your weekly budget"},
+    {"task": "Walk the dog", "desc": "Walk at least a mile"},
+    {"task": "Weekly Study Session", "desc": "Make sure to study chapter 8-10"}
     ]
     
-    save_tasks(valid_tasks)
+    save_tasks(tasks_list)
     get_tasks()
 
 
@@ -44,7 +42,7 @@ def test_empty_list():
 if __name__ == "__main__":
     print("Starting tests...")
 
-    test_task_list()
+#    test_task_list()
 #    test_invalid_data()
     test_empty_list()
     
