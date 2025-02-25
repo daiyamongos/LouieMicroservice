@@ -8,7 +8,7 @@ It allow for task list retrieval (using /getTasks) as well as task list saving t
 
 # Communication Contract:
 
-## Place holder for UML Diagram
+![UML Diagram for the interactions between main, http, microservice, and json files](UMLDiagram.png)
 
 ## Example of sending task list to microservice A (with HTTP POST request)
 
