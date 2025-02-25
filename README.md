@@ -22,7 +22,7 @@ tasks_list = [
 ```
 ### URL of the POST microservice
 ```
-url = "http://localhost:5000/saveTasks"
+url = "http://127.0.0.1:5000"
 
 tasks_list=[{},{},...,{}]
 response = requests.post(f"{url}/saveTasks", json=tasks)
@@ -61,10 +61,9 @@ if the microservice cannot save the task list to savedTasks.json for any reason
 ## Example of retrieving task list from microservice A (with HTTP GET request)
 
 ```
-### URL of the GET microservice
-url = "http://localhost:5000/getTasks"
+url = "http://127.0.0.1:5000"
 
-response = requests.get(url)
+response = requests.get(f"{url}/getTasks")
 
 ''' this is checking that it is not an error message before setting the task list '''
 if isinstance(response, dict) == False: 
